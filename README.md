@@ -1,12 +1,39 @@
-# React + Vite
+# event - handling in react simple example: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1920" height="1080" alt="Screenshot (587)" src="https://github.com/user-attachments/assets/2cebafe9-0dd2-4615-8243-71aa812f4fa1" />
+```
+import React from 'react'
 
-## Expanding the ESLint configuration
+function Card() {
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  const onhandler = () => {
+    alert("Download started!");
+  }
+
+  const data = [
+    {name: "Mahi ve", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."},
+    {name: "O rabba ve", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+  ]
+
+  return (
+    <div className="flex flex-col gap-5 items-center justify-center w-full h-screen bg-zinc-300">
+      
+      {data.map((item, index) => (
+        <div key = {index} className='px-2 py-2 bg-white rounded-md w-100 h-fit'>
+        <h1 className='font-semibold px-2 py-2'>{item.name}</h1>
+        <p className='text-xs mt-1 ml-2'> {item.description}</p>
+        <button onClick={onhandler} className="bg-blue-500 text-xs text-white mt-1 px-2 py-2 rounded-md ml-2 hover:bg-blue-600">Download now</button>
+      </div>
+
+      ))}
+
+      
+    </div>
+  )
+}
+
+export default Card
+
+```
