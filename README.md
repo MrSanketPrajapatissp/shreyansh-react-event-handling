@@ -3,7 +3,9 @@
 
 
 <img width="1920" height="1080" alt="Screenshot (587)" src="https://github.com/user-attachments/assets/2cebafe9-0dd2-4615-8243-71aa812f4fa1" />
+
 ```
+
 import React from 'react'
 
 function Card() {
@@ -37,3 +39,4 @@ function Card() {
 export default Card
 
 ```
+
